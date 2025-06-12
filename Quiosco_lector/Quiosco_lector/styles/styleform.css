@@ -1,0 +1,404 @@
+:root {
+  --color-primario: #F6F7E8;
+  --color-secundario: #733612;
+  --color-terciario: #BF947A;
+  --color-hover: #732A10;
+  --color-login: #b2a077;
+  --color-perfil: #BF947A;
+  --color-licencias: #8c6b56;
+  --color-texto: #2c1a0d;
+  --color-fondo-busqueda: #c8a88e;
+  --fuente-montserrat: "Montserrat", sans-serif;
+  --fuente-krona: "Krona One", sans-serif;
+}
+
+body {
+  font-family: var(--fuente-montserrat);
+  background-image: url("https://png.pngtree.com/background/20210715/original/pngtree-beige-line-drawing-floral-background-picture-image_1285755.jpg");
+  background-size: cover; /* Cubre todo el espacio disponible */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Fija la imagen al desplazarse */
+  background-repeat: no-repeat; /* Evita que se repita */
+  color: var(--color-texto);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Añade un overlay para mejor legibilidad */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(246, 247, 232, 1); /* --color-primario con 85% opacidad */
+  z-index: -1; /* Coloca detrás del contenido */
+}
+/* Contenedor principal mejorado */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 3rem auto;
+  padding: 0 3rem;
+}
+
+/* Card del formulario - Estilo premium */
+.card-text {
+  background-color: var(--color-terciario);
+  padding: 4rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(115, 54, 18, 0.15);
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  border: 1px solid var(--color-secundario);
+}
+
+/* Título destacado */
+.card-title {
+  font-family: var(--fuente-krona);
+  color: var(--color-secundario);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Campos de formulario mejorados */
+.form-group {
+  margin-bottom: 2.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  color: var(--color-secundario);
+  font-size: 1.1rem;
+}
+
+.form-control {
+  width: 90%;
+  padding: 20px 20px;
+  border: 2px solid var(--color-secundario);
+  border-radius: 12px;
+  background-color: var(--color-primario);
+  color: var(--color-texto);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  font-family: var(--fuente-montserrat);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-hover);
+  box-shadow: 0 0 0 4px rgba(115, 42, 16, 0.2);
+}
+
+/* Botón premium */
+.btn-primary {
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 2.5rem;
+  font-family: var(--fuente-montserrat);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(115, 42, 16, 0.3);
+}
+
+/* Enlaces con estilo */
+a {
+  color: var(--color-secundario);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--color-hover);
+  text-decoration: underline;
+}
+
+.sign-up {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.05rem;
+  color: var(--color-texto);
+}
+
+/* Responsive para escritorio grande */
+@media (min-width: 1600px) {
+  .container {
+    margin: 7rem auto;
+  }
+  .card-text {
+    padding: 5rem;
+  }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .container {
+    margin: 3rem auto;
+    padding: 0 1.8rem;
+  }
+  
+  .card-text {
+    padding: 3rem 2rem;
+    border-radius: 15px;
+  }
+  
+  .card-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 2rem;
+  }
+  
+  .btn-primary {
+    padding: 14px;
+  }
+}
+/* Estilo para el botón de volver */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: var(--fuente-montserrat);
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--color-secundario);
+  z-index: 1000;
+}
+
+.back-button:hover {
+  background-color: var(--color-hover);
+  transform: translateX(-3px);
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+}
+
+.back-button i {
+  font-size: 0.9rem;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+  .back-button {
+    top: 15px;
+    left: 15px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+/* styles/styleform.css - Sección adicional */
+
+/* Estilos para el formulario de registro */
+.avatar-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.avatar-option {
+  position: relative;
+  text-align: center;
+}
+
+.avatar-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.avatar-option label {
+  display: block;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.avatar-option input[type="radio"]:checked + label {
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 10px rgba(115, 54, 18, 0.3);
+}
+
+.avatar-option img {
+  width: 80px;
+  height: 80px;
+  border-radius: 60%;
+  border: 1rem var(--color-hover);
+  object-fit: cover;
+}
+
+.password-requirements {
+  margin-top: 0.5rem;
+  color: var(--color-licencias);
+  font-size: 0.8rem;
+}
+
+/* Estilos para el formulario de pago */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: var(--color-primario);
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Estilos para el perfil */
+.profile-card {
+  background-color: var(--color-terciario);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-secundario);
+  margin-bottom: 1rem;
+}
+
+/* Estilos para configuración */
+.settings-card {
+  background-color: var(--color-terciario);
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.setting-option {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-licencias);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0 1rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-secundario);
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--color-hover);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.header-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #444;
+  /* Opcional: un borde elegante */
+  transition: transform 0.3s ease;
+}
+
+.header-avatar:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
