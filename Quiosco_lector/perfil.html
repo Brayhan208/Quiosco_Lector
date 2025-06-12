@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es-co">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Perfil</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-title">
+        <a href="index.html" target="_blank">
+          <img src="img/logo_quiosco.jpg" alt="Logo Quiosco" class="logo-circular" />
+        </a>
+        <h1 class="titulo-quiosco">Quiosco Lector</h1>
+      </div>
+
+      <form class="search-form" role="search">
+        <input type="search" placeholder="Buscar libros..." aria-label="Buscar libros" />
+      </form>
+
+      <div class="user-actions">
+        <div class="user-avatar">
+          <img src="img/avatars/avatar1.png" alt="Avatar de usuario" class="header-avatar" />
+        </div>
+
+        <div class="dropdown-menu-container" id="main-dropdown">
+          <button class="dropdown-menu-button">
+            Menú <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-menu-content">
+            <a href="index.html">Inicio</a>
+            <a href="login.html">Libros</a>
+            <a href="metodo.html">Método Pomodoro</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <a href="editarperfil.html" class="back-button">
+      <i class="fas fa-arrow-left"></i> editar
+    </a>
+    <div class="perfil-simple-container">
+      <div class="perfil-simple-header">
+        <div class="user-avatar">
+          <img src="img/avatars/avatar1.png" alt="avatar" class="profile-avatar" />
+        </div>
+        <h1 class="perfil-simple-titulo">Admin</h1>
+        <p class="perfil-simple-subtitulo">Perfil de usuario</p>
+      </div>
+
+      <div class="perfil-simple-seccion">
+        <h2 class="perfil-simple-seccion-titulo">Configuración</h2>
+
+        <div class="perfil-simple-estado-proyecto">
+          <div class="perfil-simple-estado-item config-item">
+            <span class="perfil-simple-estado-nombre">Tema</span>
+            <div class="theme-selector">
+              <button class="theme-btn light-theme-btn active" data-theme="light">Claro</button>
+              <button class="theme-btn dark-theme-btn" data-theme="dark">Oscuro</button>
+            </div>
+          </div>
+
+          <div class="perfil-simple-estado-item config-item">
+            <span class="perfil-simple-estado-nombre">Tamaño de texto</span>
+            <div class="font-size-selector">
+              <button class="font-size-btn small-font" data-size="small">A</button>
+              <button class="font-size-btn medium-font active" data-size="medium">A</button>
+              <button class="font-size-btn large-font" data-size="large">A</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="perfil-simple-info-grid">
+        <div class="perfil-simple-info-item">
+          <span class="perfil-simple-info-label">Edad</span>
+          <div class="perfil-simple-info-value"></div>
+        </div>
+        <div class="perfil-simple-info-item">
+          <span class="perfil-simple-info-label">Correo electrónico</span>
+          <div class="perfil-simple-info-value">ejemplo@ejemplo.com</div>
+        </div>
+        <div class="perfil-simple-info-item">
+          <span class="perfil-simple-info-label">Fecha de nacimiento</span>
+          <div class="perfil-simple-info-value">##-##-####</div>
+        </div>
+        <div class="perfil-simple-info-item">
+          <span class="perfil-simple-info-label">Contraseña</span>
+          <div class="perfil-simple-info-value">**********</div>
+        </div>
+      </div>
+
+      <div class="perfil-simple-seccion">
+        <h2 class="perfil-simple-seccion-titulo">Planes</h2>
+
+        <div class="perfil-simple-estado-proyecto">
+          <div class="perfil-simple-estado-item">
+            <span class="perfil-simple-estado-nombre">Hamsters</span>
+            <div class="rating-container">
+              <div class="rating-stars" data-plan="hamsters">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <span class="rating-value">0</span>
+            </div>
+          </div>
+
+          <div class="perfil-simple-estado-item">
+            <span class="perfil-simple-estado-nombre">Rata</span>
+            <div class="rating-container">
+              <div class="rating-stars" data-plan="rata">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <span class="rating-value">0</span>
+            </div>
+          </div>
+
+          <div class="perfil-simple-estado-item">
+            <span class="perfil-simple-estado-nombre">Zarigüeya</span>
+            <div class="rating-container">
+              <div class="rating-stars" data-plan="zarigueya">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <span class="rating-value">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="perfil-simple-seccion">
+        <h2 class="perfil-simple-seccion-titulo">Historial de inicios</h2>
+        <div class="perfil-simple-estado-proyecto">
+          <div class="perfil-simple-estado-item">
+            <span class="perfil-simple-estado-nombre">Diseño web</span>
+            <span class="perfil-simple-estado-valor">Completado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="equipo">
+      <div class="instagram">
+        <a href="https://www.instagram.com/quioscolector?igsh=cWJxZHMweTM3emQw" target="_blank">
+          <img src="img/instagram.png" alt="Instagram" class="instagram-logo" />
+        </a>
+      </div>
+
+      <div class="team-content">
+        <h2>Equipo de trabajo</h2>
+        <div class="miembros-container">
+          <div class="miembro">
+            <a href="https://www.instagram.com/tmq_juana?igsh=MWVndml1ZWd1emZlYw==" target="_blank">
+              <img src="img/foto_juana.jpg" alt="Juana Pabon" />
+            </a>
+            <p><strong>Juana Pabon</strong><br />Desarrolladora</p>
+          </div>
+          <div class="miembro">
+            <a href="https://www.instagram.com/brayhan208/" target="_blank">
+              <img src="img/foto_brayhan.jpg" alt="Brayhan Gonzalez" />
+            </a>
+            <p><strong>Brayhan Gonzalez</strong><br />Desarrollador</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/perfil.js"></script>
+  <script src="js/perfil2.js"></script>
+</body>
+
+</html>

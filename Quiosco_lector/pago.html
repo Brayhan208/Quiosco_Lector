@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es-co">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pago</title>
+  <link rel="stylesheet" href="styles/styleform.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <a href="planes.html" class="back-button">
+    <i class="fas fa-arrow-left"></i> Volver
+  </a>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 mt-5">
+          <h3 class="card-title text-center">Datos de Pago</h3>
+          <div class="card-text">
+            <form id="pagoForm">
+
+              <div class="form-group">
+                <label>Total de la compra:</label>
+                <p id="totalCompra" style="font-weight:bold; font-size: 18px;">$0</p>
+              </div>
+
+              <div class="form-group">
+                <label for="cuotas">Número de Cuotas (Máx. 10)</label>
+                <input type="number" class="form-control" id="cuotas" name="cuotas" min="1" max="10" value="1" required>
+              </div>
+
+              <div class="form-group">
+                <label for="valorCuota">Valor por Cuota</label>
+                <input type="number" class="form-control" id="valorCuota" name="valorCuota" readonly>
+              </div>
+
+              <div class="form-group">
+                <label for="nombreTarjeta">Nombre en la Tarjeta</label>
+                <input type="text" class="form-control" id="nombreTarjeta" name="nombreTarjeta" required>
+              </div>
+
+              <div class="form-group">
+                <label for="numeroTarjeta">Número de Tarjeta</label>
+                <input type="text" class="form-control" id="numeroTarjeta" name="numeroTarjeta"
+                  placeholder="0000-0000-0000-0000" maxlength="19" oninput="formatearTarjeta()" required>
+                <small class="error-message" id="tarjetaError"></small>
+              </div>
+
+              <div class="form-group">
+                <label>Franquicia</label>
+                <div id="franquiciaContainer">
+                  <img id="franquiciaImg" src="img/credito.png" alt="Franquicia" style="height: 60px; width: 200px" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="codigoSeguridad">Código de Seguridad</label>
+                <input type="text" class="form-control" id="codigoSeguridad" name="codigoSeguridad" maxlength="4"
+                  required>
+                <small class="error-message" id="cvvError"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="mesExpiracion">Mes de Expiración</label>
+                <select class="form-control" id="mesExpiracion" name="mesExpiracion" required>
+                  <option value="">Seleccione</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="anoExpiracion">Año de Expiración</label>
+                <select class="form-control" id="anoExpiracion" name="anoExpiracion" required>
+                  <option value="">Seleccione</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                  <option value="2030">2030</option>
+                  <option value="2031">2031</option>
+                  <option value="2032">2032</option>
+                  <option value="2033">2033</option>
+                  <option value="2034">2034</option>
+                  <option value="2035">2035</option>
+                  <option value="2036">2036</option>
+                  <option value="2037">2037</option>
+                  <option value="2038">2038</option>
+                  <option value="2039">2039</option>
+                  <option value="2040">2040</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Dirección</label>
+                <input type="text" id="direccion" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label>Ciudad</label>
+                <input type="text" id="ciudad" class="form-control" required>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Pagar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="confirmacionModal"
+    style="display:none; position:fixed; top:0;left:0; background: rgba(0,0,0,0.5); width:100%;height:100%; justify-content:center;align-items:center">
+    <div style="background:white;padding:20px; max-width:500px; margin:auto;">
+      <span onclick="this.parentElement.parentElement.style.display='none'" style="float:right;cursor:pointer">×</span>
+      <div id="resumenCompra"></div>
+      <button id="confirmarPago">Confirmar Pago</button>
+    </div>
+  </div>
+
+  <script src="js/pago.js"></script>
+</body>
+
+</html>

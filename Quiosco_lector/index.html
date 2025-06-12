@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es-co">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiosco Lector</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-title">
+        <img src="img/logo_quiosco.jpg" alt="Logo Quiosco" class="logo-circular">
+        <h1 class="titulo-quiosco">Quiosco Lector</h1>
+      </div>
+
+      <form class="search-form" role="search">
+        <input type="search" placeholder="Buscar libros..." aria-label="Buscar libros">
+      </form>
+
+      <div class="user-actions">
+        <button id="btn-login" class="btn-login">Iniciar Sesión</button>
+
+        <!-- Main dropdown menu -->
+        <div class="dropdown-menu-container" id="main-dropdown">
+          <button class="dropdown-menu-button">
+            Menú <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-menu-content">
+            <a href="planes.html">Ver Planes</a>
+            <a href="#beneficios">Beneficios</a>
+            <a href="#libros">Algunos Libros</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#faq">Preguntas Frecuentes</a>
+            <a href="leer.html">Libros</a>
+            <a href="metodo.html">Método Pomodoro</a>
+            <a href="subir.html">Subir Archivos</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu toggle -->
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    </div>
+  </header>
+
+  <script src="js/index.js"></script>
+
+  <main>
+    <section class="beneficios" id="beneficios">
+      <h2>Beneficios de utilizar la app</h2>
+      <ul>
+        <li>⭐ Espacio colaborativo para compartir y descubrir contenido educativo.</li>
+        <li>✉️ Acceso libre a documentos, crónicas, historietas, poesía y más.</li>
+        <li>🧠 Fortalecimiento del pensamiento crítico y la comunidad lectora.</li>
+      </ul>
+      <div class="caracteristicas-app">
+        <div class="caracteristica">
+          <a href="leer.html" target="_blank">
+            <img src="img/icono_lectura.png" alt="Lectura">
+          </a>
+          <p>Leer libros y documentos académicos</p>
+        </div>
+        <div class="caracteristica">
+          <a href="metodo.html" target="_blank">
+            <img src="img/icono_estudio.png" alt="Estudio">
+          </a>
+          <p>Espacio de estudio y método Pomodoro</p>
+        </div>
+        <div class="caracteristica">
+          <a href="subir.html" target="_blank">
+            <img src="img/icono_archivos.png" alt="Subida de archivos">
+          </a>
+          <p>Subir archivos académicos</p>
+        </div>
+      </div>
+    </section>
+    <section class="libros" id="libros">
+      <h2>Algunos libros compartidos por nuestra comunidad</h2>
+      <div class="libros-grid"> <!-- Contenedor grid para los libros -->
+        <div class="libro">
+          <img src="img/libros/portada_libro_olvido_seremos.jpeg" alt="Portada libro 1">
+          <p><strong>Título:</strong> El olvido que seremos <br><strong>Autor:</strong> Héctor Abad
+            Faciolince<br><strong>Subido por:</strong> Laura Gómez</p>
+        </div>
+        <div class="libro">
+          <img src="img/libros/portada_libro_satanas.jpg" alt="Portada libro 2">
+          <p><strong>Título:</strong> Satanás<br><strong>Autor:</strong> Mario Mendoza <br><strong>Subido por:</strong>
+            Juan Pérez</p>
+        </div>
+        <div class="libro">
+          <img src="img/libros/portada_libro_ciensoledad.jpeg" alt="Portada libro 3">
+          <p><strong>Título:</strong> Cien años de soledad <br><strong>Autor:</strong> Gabriel García
+            Márquez<br><strong>Subido
+              por:</strong> Miguel Peña</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+      <h2> Contáctenos </h2>
+      <form id="formulario-contacto">
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <input type="text" placeholder="Asunto" required>
+        <textarea placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="pregunta">
+        <h3>¿Es gratis usar el Quiosco Lector?</h3>
+        <p>Sí, puedes leer, subir archivos y estudiar sin costo alguno.</p>
+      </div>
+      <div class="pregunta">
+        <h3>¿Qué tipo de documentos puedo subir?</h3>
+        <p>Documentos académicos, cuentos, poesía, artículos, entre otros contenidos educativos.</p>
+      </div>
+      <div class="pregunta">
+        <h3>¿Cómo contacto al soporte?</h3>
+        <p>Puedes escribirnos a través del formulario de contacto disponible en la página.</p>
+      </div>
+    </section>
+
+    <section class="" id="faq">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="pregunta">
+        <h3>¿Es gratis usar el Quiosco Lector?</h3>
+        <p>Sí, puedes leer, subir archivos y estudiar sin costo alguno.</p>
+      </div>
+      <div class="pregunta">
+        <h3>¿Qué tipo de documentos puedo subir?</h3>
+        <p>Documentos académicos, cuentos, poesía, artículos, entre otros contenidos educativos.</p>
+      </div>
+      <div class="pregunta">
+        <h3>¿Cómo contacto al soporte?</h3>
+        <p>Puedes escribirnos a través del formulario de contacto disponible en la página.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="equipo">
+      <div class="instagram">
+        <a href="https://www.instagram.com/quioscolector?igsh=cWJxZHMweTM3emQw" target="_blank">
+          <img src="img/instagram.png" alt="Instagram" class="instagram-logo">
+        </a>
+      </div>
+
+      <div class="team-content">
+        <h2>Equipo de trabajo</h2>
+        <div class="miembros-container">
+          <div class="miembro">
+            <a href="https://www.instagram.com/tmq_juana?igsh=MWVndml1ZWd1emZlYw==" target="_blank">
+              <img src="img/foto_juana.jpg" alt="Juana Pabon">
+            </a>
+            <p><strong>Juana Pabon</strong><br>Desarrolladora</p>
+          </div>
+          <div class="miembro">
+            <a href="https://www.instagram.com/brayhan208/" target="_blank">
+              <img src="img/foto_brayhan.jpg" alt="Brayhan Gonzalez">
+            </a>
+            <p><strong>Brayhan Gonzalez</strong><br>Desarrollador</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const formulario = document.getElementById("formulario-contacto");
+
+      formulario.addEventListener("submit", e => {
+        e.preventDefault();
+        alert("¡Gracias por contactarnos! Tu mensaje ha sido enviado.");
+        formulario.reset();
+      });
+    });
+  </script>
+
+</body>
+
+</html>
